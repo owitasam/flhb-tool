@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "flhb-tool"
+version = "0.3.0"
+description = "Fedora Lutris Loader Bridge - orchestration and wrapper utility for Lutris on Fedora Linux"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [
+    { name = "flhb-tool contributors" },
+]
+keywords = ["lutris", "wine", "fedora", "gaming", "orchestration"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: X11 Applications",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Games/Entertainment",
+    "Topic :: System :: Emulators",
+]
+
+[project.scripts]
+flhb-check = "flhb_tool.system_check:main"
+flhb-bridge = "flhb_tool.bridge:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["flhb_tool*"]

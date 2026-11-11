@@ -1,0 +1,15 @@
+{
+  "$schema": "flhb-tool bridge config v1",
+  "wine_prefix_path": "/home/user/Games/lutris-pfx",
+  "target_executable": "/home/user/Games/game/bin/game.exe",
+  "loader_arguments": ["--loader-flag", "value"],
+  "environment_overrides": {
+    "DXVK": "1",
+    "VKD3D": "1",
+    "WINEDEBUG": "-all",
+    "WINEESYNC": "1",
+    "WINEFSYNC": "1"
+  },
+  "working_directory": "/home/user/Games/game/bin",
+  "wine_arch": "win64"
+}
